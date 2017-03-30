@@ -1,24 +1,12 @@
-# README
-
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+# Riot.jsをRailsで使うサンプル
+- やったこと
+  - npm install riot -g
+  - rails new
+  - Riot.js公式からファイルをDLし、vendor/assets/javascript に保存
+  - app/assets/riot と app/assets/javascripts/riot ディレクトリを作成する
+  - application.js に //= require riot と マウントコードを追記
+  - app/assets/riot/hello.tag を作成し、カスタムタグを定義する
+  - 適当にコントローラとroutesを定義して、viewにカスタムタグを埋め込む
+  - riotコマンドを使って .tag を .js にコンパイルする
+    - riot -w app/assets/riot app/assets/javascripts/riot
+  - rails s でアクセス
